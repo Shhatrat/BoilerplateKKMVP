@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 27
@@ -72,6 +73,9 @@ dependencies {
     compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
     compile 'id.zelory:compressor:2.1.0'
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+    compile 'nz.bradcampbell:paperparcel:2.0.4'
+    compile 'nz.bradcampbell:paperparcel-kotlin:2.0.4' // Optional
+    kapt 'nz.bradcampbell:paperparcel-compiler:2.0.4'
 
     androidTestCompile "com.android.support:support-annotations:$SUPPORT_LIBRARY_VERSION"
     androidTestCompile("com.android.support.test.espresso:espresso-contrib:$ESPRESSO_VERSION") {

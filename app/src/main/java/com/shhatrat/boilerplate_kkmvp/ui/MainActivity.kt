@@ -1,7 +1,8 @@
-package com.shhatrat.boilerplate_kkmvp
+package com.shhatrat.boilerplate_kkmvp.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.shhatrat.boilerplate_kkmvp.R
 
 class MainActivity : AppCompatActivity() {
 
