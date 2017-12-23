@@ -46,7 +46,6 @@ dependencies {
     compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
-
     //rx2
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile "io.reactivex.rxjava2:rxjava:2.1.7"
@@ -58,7 +57,6 @@ dependencies {
     compile "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
     compile "com.squareup.retrofit2:adapter-rxjava2:$RETROFIT_VERSION"
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
-
 
     //koin (di)
     compile 'org.koin:koin-core:0.6.1'

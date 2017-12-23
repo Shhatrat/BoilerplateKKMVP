@@ -14,6 +14,13 @@ abstract class BaseActivity: AppCompatActivity(), BasePresenterHandle{
         attachPresenter()
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        attachPresenter()
+    }
+
+    fun getContext() = this
+
     override fun onDestroy() {
         super.onDestroy()
         detachPresenter()
