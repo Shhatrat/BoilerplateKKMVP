@@ -8,7 +8,7 @@ import com.shhatrat.boilerplate_kkmvp.di.baseUi.Presenter
  */
 interface ExContract{
     interface IView: MvpView{
-        fun showTime(time: Long)
+        fun showTime(time: String)
     }
     interface IPresenter<in T:MvpView>: Presenter<T>{
         fun getTime()

@@ -24,8 +24,8 @@ class ExActivity : BaseActivity(), ExContract.IView {
         presenter.detachView()
     }
 
-    override fun showTime(time: Long) {
-        toast(time.toString())
+    override fun showTime(time: String) {
+        toast(time)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
