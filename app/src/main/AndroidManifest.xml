@@ -17,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.ex.ExActivity"></activity>
+        <activity android:name=".ui.ex.ExActivity" />
+        <activity android:name=".ui.base.web.WebViewActivity" />
     </application>
 
 </manifest>
