@@ -10,12 +10,8 @@ import org.koin.android.module.AndroidModule
  */
 class ManagerModule: AndroidModule(){
     override fun context() = applicationContext {
-//        context("OK"){
             provide(REAL) { DataManagerImpl() } bind DataManager::class
-//        }
-//        context("FAKE"){
             provide(FAKE) { DataManagerFake() } bind DataManager::class
-//        }
     }
 
     companion object {
