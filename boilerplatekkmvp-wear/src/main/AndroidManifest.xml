@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shhatrat.boilerplate.boilerplatekkmvp_wear">
+    package="com.shhatrat.boilerplate_kkmvp">
 
     <uses-feature android:name="android.hardware.type.watch" />
 
