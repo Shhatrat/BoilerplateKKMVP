@@ -11,6 +11,7 @@ Welcome to my boilerplate Android project. Firstly, why I named it KKMVP?
 Repository contains branches:
 - `addon/RestApi` simple example and logic for using REST api.
 - `addon/BaseViews` simple classes (such as adapters) for reducing boilerplate code
+- `addon/AndroidWear` simple boilerplate for standalone Android Wear app
 
 You can easily merge it into `master`.
 
