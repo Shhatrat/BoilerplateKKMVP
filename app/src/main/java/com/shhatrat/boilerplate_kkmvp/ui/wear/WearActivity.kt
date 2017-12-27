@@ -15,7 +15,6 @@ class WearActivity : BaseActivity(), WearContract.IView {
     override fun attachPresenter() {
         presenter.attachView(this)
     }
-
     override fun detachPresenter() {
         presenter.detachView()
     }

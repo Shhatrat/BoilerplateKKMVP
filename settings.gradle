@@ -1,1 +1,1 @@
-include ':app', ':boilerplatekkmvp-wear'
+include ':app', ':boilerplatekkmvp-wear', ':shared-classess'

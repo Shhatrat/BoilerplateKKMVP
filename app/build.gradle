@@ -22,15 +22,12 @@ android {
 }
 
 dependencies {
-
     final SUPPORT_LIBRARY_VERSION = '27.0.2'
     final ANKO_VERSION = '0.10.0'
     final RETROFIT_VERSION = '2.3.0'
     final ESPRESSO_VERSION = '2.2.1'
     final RUNNER_VERSION = '0.4'
-
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
@@ -48,7 +45,7 @@ dependencies {
 
     //rx2
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile "io.reactivex.rxjava2:rxjava:2.1.7"
+    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
     compile 'io.reactivex.rxjava2:rxkotlin:2.2.0'
     compile 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
 
@@ -65,14 +62,16 @@ dependencies {
 
     //utils
     compile "org.jetbrains.anko:anko-commons:$ANKO_VERSION"
-    compile("com.github.hotchemi:permissionsdispatcher:2.4.0") {
+    compile('com.github.hotchemi:permissionsdispatcher:2.4.0') {
         exclude module: "support-v13"
     }
-    compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
+    compile 'joda-time:joda-time:2.9.9'
     compile 'id.zelory:compressor:2.1.0'
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'
     compile 'nz.bradcampbell:paperparcel:2.0.4'
-    compile 'nz.bradcampbell:paperparcel-kotlin:2.0.4' // Optional
+    compile 'nz.bradcampbell:paperparcel-kotlin:2.0.4'
+
+    // Optional
     kapt 'nz.bradcampbell:paperparcel-compiler:2.0.4'
 
     //wear
@@ -80,7 +79,6 @@ dependencies {
     compile 'com.github.tajchert:BusWear:0.9.6'
     compile 'com.google.android.gms:play-services-wearable:11.8.0'
     compile 'com.patloew.rxwear:rxwear2:2.0.0'
-
     androidTestCompile "com.android.support:support-annotations:$SUPPORT_LIBRARY_VERSION"
     androidTestCompile("com.android.support.test.espresso:espresso-contrib:$ESPRESSO_VERSION") {
         exclude group: 'com.android.support', module: 'appcompat'
@@ -91,6 +89,7 @@ dependencies {
     androidTestCompile "com.android.support.test:runner:$RUNNER_VERSION"
     androidTestCompile "com.android.support.test:rules:$RUNNER_VERSION"
     wearApp project(':boilerplatekkmvp-wear')
+    implementation project(':shared-classess')
 }
 repositories {
     mavenCentral()
