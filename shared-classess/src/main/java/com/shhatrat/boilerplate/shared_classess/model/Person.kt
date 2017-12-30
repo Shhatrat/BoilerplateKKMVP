@@ -1,11 +1,11 @@
-package com.shhatrat.boilerplate_kkmvp.data.model
+package com.shhatrat.boilerplate.shared_classess.model
 
 import com.google.gson.annotations.SerializedName
 import paperparcel.PaperParcel
 import paperparcel.PaperParcelable
 
 /**
- * Created by szymon on 23/12/17.
+ * Created by szymon on 27/12/17.
  */
 @PaperParcel
 data class Person(
@@ -13,7 +13,7 @@ data class Person(
         @field:SerializedName("id_card")
         val idCard: Int
 ): PaperParcelable {
-        companion object {
-                //change "PaperParcelPerson" to proper (based on name) data class name
-                @JvmField val CREATOR = PaperParcelPerson.CREATOR }
+    companion object {
+        //change "PaperParcelPerson" to proper (based on name) data class name
+        @JvmField val CREATOR = PaperParcelPerson.CREATOR }
 }

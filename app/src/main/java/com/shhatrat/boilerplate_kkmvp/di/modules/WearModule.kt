@@ -10,7 +10,7 @@ import org.koin.android.module.AndroidModule
  */
 class WearModule: AndroidModule() {
     override fun context() = applicationContext {
-        provide { WearManagerImpl(get()) } bind WearManager::class
+        provide { WearManagerImpl(getRxWear()) } bind WearManager::class
     }
 
     fun getRxWear() = RxWear(context)

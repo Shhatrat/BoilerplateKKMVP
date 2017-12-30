@@ -1,5 +1,6 @@
 package com.shhatrat.boilerplate_kkmvp.ui.wear
 
+import com.shhatrat.boilerplate.shared_classess.model.Person
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.MvpView
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.Presenter
 
@@ -8,9 +9,9 @@ import com.shhatrat.boilerplate_kkmvp.di.baseUi.Presenter
  */
 interface WearContract{
     interface IView: MvpView {
-        fun getMessage(input: String)
+        fun getMessage(person: Person)
     }
     interface IPresenter<in T: MvpView>: Presenter<T> {
-        fun sendMessage(input: String)
+        fun sendMessage(person: Person)
     }
 }

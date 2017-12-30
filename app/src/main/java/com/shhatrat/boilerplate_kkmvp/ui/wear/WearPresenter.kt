@@ -1,7 +1,9 @@
 package com.shhatrat.boilerplate_kkmvp.ui.wear
 
+import com.shhatrat.boilerplate.shared_classess.model.Person
 import com.shhatrat.boilerplate_kkmvp.data.manager.wear.WearManager
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.BasePresenter
+import io.reactivex.rxkotlin.addTo
 
 /**
  * Created by szymon on 27/12/17.
@@ -9,8 +11,15 @@ import com.shhatrat.boilerplate_kkmvp.di.baseUi.BasePresenter
 class WearPresenter
 constructor(private val wearManager: WearManager): BasePresenter<WearContract.IView>(), WearContract.IPresenter<WearContract.IView>{
 
-    override fun sendMessage(input: String) {
-
+    override fun sendMessage(person: Person) {
+        wearManager
+                .sendData(person)
+                .subscribe({
+                    it.dec()
+                },{
+                    it.message
+                })
+                .addTo(subscriptions)
     }
 
 }

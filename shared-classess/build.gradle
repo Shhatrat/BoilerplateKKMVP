@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 26
@@ -33,6 +34,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    compile 'nz.bradcampbell:paperparcel:2.0.4'
+    compile 'nz.bradcampbell:paperparcel-kotlin:2.0.4' // Optional
+    kapt 'nz.bradcampbell:paperparcel-compiler:2.0.4'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.google.android.gms:play-services-wearable:11.8.0'
 }
 repositories {
     mavenCentral()
