@@ -39,6 +39,11 @@ dependencies {
     kapt 'nz.bradcampbell:paperparcel-compiler:2.0.4'
     compile 'com.google.code.gson:gson:2.8.2'
     compile 'com.google.android.gms:play-services-wearable:11.8.0'
+    //utils
+    compile "org.jetbrains.anko:anko-commons:0.10.0"
+    compile('com.github.hotchemi:permissionsdispatcher:2.4.0') {
+        exclude module: "support-v13"
+    }
 }
 repositories {
     mavenCentral()
