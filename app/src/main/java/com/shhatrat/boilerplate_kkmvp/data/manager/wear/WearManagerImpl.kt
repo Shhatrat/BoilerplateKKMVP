@@ -19,4 +19,6 @@ class WearManagerImpl(private val rxWear : RxWear): WearManager{
 
     override fun getData(person: Person) {
     }
+
+    override fun checkConnection() =  rxWear.checkConnection()
 }
