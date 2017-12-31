@@ -68,6 +68,11 @@ dependencies {
     compile("com.github.hotchemi:permissionsdispatcher:2.4.0") {
         exclude module: "support-v13"
     }
+
+    //test
+    testCompile "junit:junit:4.12"
+    testCompile "org.mockito:mockito-core:2.1.0"
+
     compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
     compile 'id.zelory:compressor:2.1.0'
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'
