@@ -17,7 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.ex.ExActivity"></activity>
+        <activity android:name=".ui.ex.ExActivity" />
+
+        <service
+            android:name=".service.MainService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
