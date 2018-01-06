@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        startActivity<ExActivity>()
-        startService<MainService>()
-        button.setOnClickListener {
-            toast(isRunning<MainService>().toString())
-        }
+        startActivity<ExActivity>()
+//        startService<MainService>()
+//        button.setOnClickListener {
+//            toast(isRunning<MainService>().toString())
+//        }
     }
 }
