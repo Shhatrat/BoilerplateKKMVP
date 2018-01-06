@@ -25,3 +25,4 @@ You can easily merge it into `master`.
 - Picasso
 - PaperParcel
 - Calligraphy
+- Realm
