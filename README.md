@@ -12,6 +12,7 @@ Repository contains branches:
 - `addon/RestApi` simple example and logic for using REST api.
 - `addon/BaseViews` simple classes (such as adapters) for reducing boilerplate code
 - `addon/AndroidWear` simple boilerplate for standalone Android Wear app
+- `addon/Realm` simple example of using Realm DB
 
 You can easily merge it into `master`.
 
