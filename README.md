@@ -14,6 +14,7 @@ Repository contains branches:
 - `addon/AndroidWear` simple boilerplate for standalone Android Wear app
 - `addon/Realm` simple example of using Realm DB
 - `addon/Room` simple example of using Room DB
+
 You can easily merge it into `master`.
 
 # Technologies and patterns used
