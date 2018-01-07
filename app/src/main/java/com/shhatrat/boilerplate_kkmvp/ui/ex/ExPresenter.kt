@@ -3,6 +3,7 @@ package com.shhatrat.boilerplate_kkmvp.ui.ex
 import com.shhatrat.boilerplate_kkmvp.data.db.PersonDao
 import com.shhatrat.boilerplate_kkmvp.data.model.Person
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.BasePresenter
+import io.reactivex.rxkotlin.addTo
 
 /**
  * Created by szymon on 23/12/17.
@@ -12,7 +13,13 @@ constructor(private val dao: PersonDao): BasePresenter<ExContract.IView>(), ExCo
 
     override fun getTime() {
         dao.insertTask(Person("test", 123))
-        view.showTime(dao.getAllTasks().size.toString())
+        dao.getAllTasks()
+                .subscribe({
+                    view.showTime(it.size.toString())
+                },{
+                    view.showTime("error")
+                })
+                .addTo(subscriptions)
     }
 
 }
