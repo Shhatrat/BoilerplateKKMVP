@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:name=".Boilerplate"
         android:allowBackup="true"
@@ -27,6 +29,8 @@
             android:enabled="true"
             android:exported="true"></service>
         <activity android:name=".ui.base.web.WebViewActivity" />
+        <activity android:name=".ui.ex.ExActivity" />
+        <activity android:name=".ui.wear.WearActivity"></activity>
     </application>
 
 </manifest>

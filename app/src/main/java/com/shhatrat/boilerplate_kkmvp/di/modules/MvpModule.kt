@@ -7,6 +7,8 @@ import com.shhatrat.boilerplate_kkmvp.ui.api.ApiPresenter
 import com.shhatrat.boilerplate_kkmvp.ui.ex.ExActivity
 import com.shhatrat.boilerplate_kkmvp.ui.ex.ExContract
 import com.shhatrat.boilerplate_kkmvp.ui.ex.ExPresenter
+import com.shhatrat.boilerplate_kkmvp.ui.wear.WearContract
+import com.shhatrat.boilerplate_kkmvp.ui.wear.WearPresenter
 import org.koin.android.module.AndroidModule
 
 /**
@@ -15,6 +17,8 @@ import org.koin.android.module.AndroidModule
 class MvpModule: AndroidModule(){
     override fun context() = applicationContext {
         provide { getRepo() }
+        provide { ExPresenter(get(ExActivity.INJECT_NAME), get()) } bind ExContract.IPresenter::class
+        provide { WearPresenter(get()) } bind WearContract.IPresenter::class
         provide { ApiPresenter(get()) } bind ApiContract.IPresenter::class
         provide { ExPresenter( get()) } bind ExContract.IPresenter::class
     }

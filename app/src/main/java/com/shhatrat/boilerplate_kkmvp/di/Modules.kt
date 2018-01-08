@@ -1,6 +1,9 @@
 package com.shhatrat.boilerplate_kkmvp.di
 
 import com.shhatrat.boilerplate_kkmvp.di.modules.*
+import com.shhatrat.boilerplate_kkmvp.di.modules.ManagerModule
+import com.shhatrat.boilerplate_kkmvp.di.modules.MvpModule
+import com.shhatrat.boilerplate_kkmvp.di.modules.WearModule
 import org.koin.android.module.AndroidModule
 
 /**
@@ -8,4 +11,5 @@ import org.koin.android.module.AndroidModule
  */
 object Modules{
     fun get() = listOf<AndroidModule>(MvpModule(), ManagerModule(), ServiceModule(), AdapterModule(), ApiModule(), RoomModule())
+    fun get() = listOf<AndroidModule>(MvpModule(), ManagerModule(), WearModule())
 }

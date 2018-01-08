@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BoilerplateKKMVP.iml" filepath="$PROJECT_DIR$/BoilerplateKKMVP.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boilerplatekkmvp-wear/boilerplatekkmvp-wear.iml" filepath="$PROJECT_DIR$/boilerplatekkmvp-wear/boilerplatekkmvp-wear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shared-classess/shared-classess.iml" filepath="$PROJECT_DIR$/shared-classess/shared-classess.iml" />
     </modules>
   </component>
 </project>
