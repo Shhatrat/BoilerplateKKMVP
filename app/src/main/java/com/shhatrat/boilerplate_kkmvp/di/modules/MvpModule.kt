@@ -1,6 +1,6 @@
 package com.shhatrat.boilerplate_kkmvp.di.modules
 
-import com.shhatrat.boilerplate_kkmvp.data.repository.UserRepositiory
+import com.shhatrat.boilerplate_kkmvp.data.repository.SettingsRepositiory
 import com.shhatrat.boilerplate_kkmvp.ui.api.ApiContract
 import com.shhatrat.boilerplate_kkmvp.ui.api.ApiPresenter
 import com.shhatrat.boilerplate_kkmvp.ui.ex.ExContract
@@ -20,7 +20,7 @@ class MvpModule: AndroidModule(){
         provide { ExPresenter( get()) } bind ExContract.IPresenter::class
     }
 
-    fun getRepo(): UserRepositiory {
-        return UserRepositiory()
+    fun getRepo(): SettingsRepositiory {
+        return SettingsRepositiory()
     }
 }

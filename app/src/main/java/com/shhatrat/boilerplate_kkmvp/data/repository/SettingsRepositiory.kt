@@ -6,7 +6,9 @@ import com.shhatrat.boilerplate_kkmvp.util.base.Preferences
 /**
  * Created by szymon on 24/12/17.
  */
-class UserRepositiory: Preferences(){
+class SettingsRepositiory : Preferences(){
 
-    var name by stringPref()
+    var wear by booleanPref()
+    var backgroundService by booleanPref()
+    var updateEveryTime by booleanPref()
 }
