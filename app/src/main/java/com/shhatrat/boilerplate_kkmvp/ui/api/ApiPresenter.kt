@@ -14,10 +14,12 @@ constructor(private val apiManager: ApiManager): BasePresenter<ApiContract.IView
 
     override fun getPerson() {
         apiManager
-                .getPerson()
+                .getSensorsOfStation(52)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({view.showData(it)}
+                .subscribe({
+                    it
+                }
                 , {}).addTo(subscriptions)
     }
 

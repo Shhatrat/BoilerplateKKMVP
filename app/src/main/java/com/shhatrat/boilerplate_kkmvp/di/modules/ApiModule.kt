@@ -16,10 +16,12 @@ class ApiModule: AndroidModule() {
 
     override fun context() = applicationContext {
         provide { createOkHttpClient() }
-        provide { ApiService }
-        provide { createWebService<ApiService>(get(), ApiService.URL) }
+        provide { createWebService<ApiService>(get(), Properties.URL) }
     }
 
+    object Properties {
+        const val URL = "http://api.gios.gov.pl/pjp-api/rest/"
+    }
 
     fun createOkHttpClient(): OkHttpClient {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
