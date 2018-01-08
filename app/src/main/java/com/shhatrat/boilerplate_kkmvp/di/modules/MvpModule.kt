@@ -1,5 +1,6 @@
 package com.shhatrat.boilerplate_kkmvp.di.modules
 
+import com.shhatrat.boilerplate_kkmvp.data.db.MyDatabase
 import com.shhatrat.boilerplate_kkmvp.data.repository.UserRepositiory
 import com.shhatrat.boilerplate_kkmvp.ui.api.ApiContract
 import com.shhatrat.boilerplate_kkmvp.ui.api.ApiPresenter
@@ -17,6 +18,8 @@ class MvpModule: AndroidModule(){
         provide { ExPresenter(get(ExActivity.INJECT_NAME), get()) } bind ExContract.IPresenter::class
         provide { ApiPresenter(get()) } bind ApiContract.IPresenter::class
 
+        provide { ExPresenter( get()) } bind ExContract.IPresenter::class
+//        provide { MyDatabase() }
     }
 
     fun getRepo(): UserRepositiory {

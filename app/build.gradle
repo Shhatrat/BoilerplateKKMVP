@@ -63,6 +63,12 @@ dependencies {
     compile 'org.koin:koin-android:0.6.1'
     testCompile 'org.koin:koin-test:0.6.1'
 
+
+    //room
+    compile "android.arch.persistence.room:runtime:1.0.0"
+    kapt "android.arch.persistence.room:compiler:1.0.0"
+    compile "android.arch.persistence.room:rxjava2:1.0.0"
+
     //utils
     compile "org.jetbrains.anko:anko-commons:$ANKO_VERSION"
     compile("com.github.hotchemi:permissionsdispatcher:2.4.0") {

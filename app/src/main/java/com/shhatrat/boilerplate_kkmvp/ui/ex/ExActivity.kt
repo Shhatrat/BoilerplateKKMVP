@@ -1,6 +1,7 @@
 package com.shhatrat.boilerplate_kkmvp.ui.ex
 
 import android.os.Bundle
+import android.util.Log
 import com.shhatrat.boilerplate_kkmvp.R
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.android.BaseActivity
 import com.shhatrat.boilerplate_kkmvp.di.modules.ManagerModule
@@ -25,7 +26,8 @@ class ExActivity : BaseActivity(), ExContract.IView {
     }
 
     override fun showTime(time: String) {
-        toast(time)
+//        toast(time)
+        Log.d("dddd", time)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
