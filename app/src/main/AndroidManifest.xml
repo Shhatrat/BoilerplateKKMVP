@@ -23,6 +23,7 @@
             android:name=".service.MainService"
             android:enabled="true"
             android:exported="true"></service>
+        <activity android:name=".ui.base.web.WebViewActivity" />
     </application>
 
 </manifest>
