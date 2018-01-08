@@ -10,14 +10,7 @@ import org.koin.android.module.AndroidModule
 class RoomModule: AndroidModule(){
     override fun context() = applicationContext {
         provide { getAppDatabase() }
-//        provide { getMyDb() }
-//        provide { PersonDao() }
     }
 
-//    fun getMyDb() = getAppDatabase().personDao()
     fun getAppDatabase()= Room.databaseBuilder(context, MyDatabase::class.java, "my-todo-db").allowMainThreadQueries().build().personDao()
-//    fun oo(){
-//       val pp =  Room.databaseBuilder(context, MyDatabase::class.java, "my-todo-db").allowMainThreadQueries().build()
-//        pp.
-//    }
 }
