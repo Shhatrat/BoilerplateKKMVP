@@ -1,4 +1,4 @@
-package com.shhatrat.boilerplate_kkmvp.ui.api
+package com.shhatrat.boilerplate_kkmvp.ui.old.api
 
 import com.shhatrat.boilerplate_kkmvp.data.manager.api.ApiManager
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.BasePresenter

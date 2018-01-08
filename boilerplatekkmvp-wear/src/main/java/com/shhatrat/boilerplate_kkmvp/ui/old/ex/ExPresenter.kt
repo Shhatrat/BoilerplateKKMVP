@@ -1,4 +1,4 @@
-package com.shhatrat.boilerplate_kkmvp.ui.ex
+package com.shhatrat.boilerplate_kkmvp.ui.old.ex
 
 import com.shhatrat.boilerplate_kkmvp.data.manager.data.DataManager
 import com.shhatrat.boilerplate_kkmvp.data.repository.UserRepositiory

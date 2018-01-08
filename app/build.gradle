@@ -61,7 +61,6 @@ dependencies {
     compile 'org.koin:koin-android:0.6.1'
     testCompile 'org.koin:koin-test:0.6.1'
 
-
     //room
     compile "android.arch.persistence.room:runtime:1.0.0"
     kapt "android.arch.persistence.room:compiler:1.0.0"
@@ -88,6 +87,8 @@ dependencies {
     kapt 'nz.bradcampbell:paperparcel-compiler:2.0.4'
     compile 'com.squareup.picasso:picasso:2.5.2'
 
+    //layout
+    compile 'com.kyleduo.switchbutton:library:2.0.0'
 
     //wear
     implementation 'com.google.android.gms:play-services-wearable:11.8.0'

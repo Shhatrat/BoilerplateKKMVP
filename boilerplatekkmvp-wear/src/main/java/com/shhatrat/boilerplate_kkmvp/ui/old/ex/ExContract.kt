@@ -1,4 +1,4 @@
-package com.shhatrat.boilerplate_kkmvp.ui.ex
+package com.shhatrat.boilerplate_kkmvp.ui.old.ex
 
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.MvpView
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.Presenter

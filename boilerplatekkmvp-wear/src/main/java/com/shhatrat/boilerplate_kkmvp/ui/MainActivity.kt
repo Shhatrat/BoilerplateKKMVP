@@ -3,7 +3,7 @@ package com.shhatrat.boilerplate_kkmvp.ui
 import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
 import com.shhatrat.boilerplate_kkmvp.R
-import com.shhatrat.boilerplate_kkmvp.ui.ex.ExActivity
+import com.shhatrat.boilerplate_kkmvp.ui.old.ex.ExActivity
 import org.jetbrains.anko.startActivity
 
 

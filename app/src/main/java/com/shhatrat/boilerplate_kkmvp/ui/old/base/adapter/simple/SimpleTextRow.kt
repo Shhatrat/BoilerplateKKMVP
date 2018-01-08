@@ -1,4 +1,4 @@
-package com.shhatrat.boilerplate_kkmvp.ui.base.adapter.simple
+package com.shhatrat.boilerplate_kkmvp.ui.old.base.adapter.simple
 
 import android.content.Context
 import android.graphics.drawable.Drawable

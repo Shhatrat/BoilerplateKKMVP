@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shhatrat.boilerplate_kkmvp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
@@ -21,16 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.ex.ExActivity" />
-        <activity android:name=".ui.api.ApiActivity"></activity>
+        <activity android:name=".ui.old.ex.ExActivity" />
+        <activity android:name=".ui.old.api.ApiActivity" />
 
         <service
             android:name=".service.MainService"
             android:enabled="true"
-            android:exported="true"></service>
-        <activity android:name=".ui.base.web.WebViewActivity" />
-        <activity android:name=".ui.ex.ExActivity" />
-        <activity android:name=".ui.wear.WearActivity"></activity>
+            android:exported="true" />
+
+        <activity android:name=".ui.old.base.web.WebViewActivity" />
+        <activity android:name=".ui.old.ex.ExActivity" />
+        <activity android:name=".ui.old.wear.WearActivity" />
+        <activity android:name=".ui.settings.SettingsActivity"></activity>
     </application>
 
 </manifest>

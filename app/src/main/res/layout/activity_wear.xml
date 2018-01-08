@@ -3,6 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.shhatrat.boilerplate_kkmvp.ui.wear.WearActivity">
+    tools:context=".ui.old.wear.WearActivity">
 
 </android.support.constraint.ConstraintLayout>

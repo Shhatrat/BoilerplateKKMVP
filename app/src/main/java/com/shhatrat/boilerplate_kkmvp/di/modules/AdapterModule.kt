@@ -1,6 +1,6 @@
 package com.shhatrat.boilerplate_kkmvp.di.modules
 
-import com.shhatrat.boilerplate_kkmvp.ui.base.adapter.simple.SimpleListAdapter
+import com.shhatrat.boilerplate_kkmvp.ui.old.base.adapter.simple.SimpleListAdapter
 import org.koin.android.module.AndroidModule
 
 /**

@@ -1,4 +1,4 @@
-package com.shhatrat.boilerplate_kkmvp.ui.base.web
+package com.shhatrat.boilerplate_kkmvp.ui.old.base.web
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

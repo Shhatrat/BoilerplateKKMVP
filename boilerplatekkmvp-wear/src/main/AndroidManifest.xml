@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.ExampleWearableActivity"></activity>
-        <activity android:name=".ui.ex.ExActivity" />
+        <activity android:name="com.shhatrat.boilerplate_kkmvp.ui.old.ex.ExActivity" />
     </application>
 
 </manifest>

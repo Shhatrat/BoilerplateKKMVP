@@ -1,4 +1,4 @@
-package com.shhatrat.boilerplate_kkmvp.ui.wear
+package com.shhatrat.boilerplate_kkmvp.ui.old.wear
 
 import com.shhatrat.boilerplate.shared_classess.model.Person
 import com.shhatrat.boilerplate_kkmvp.data.manager.wear.WearManager

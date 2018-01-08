@@ -1,4 +1,4 @@
-package com.shhatrat.boilerplate_kkmvp.ui.ex
+package com.shhatrat.boilerplate_kkmvp.ui.old.ex
 
 import android.os.Bundle
 import android.util.Log
@@ -6,7 +6,6 @@ import com.shhatrat.boilerplate_kkmvp.R
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.android.BaseActivity
 import com.shhatrat.boilerplate_kkmvp.di.modules.ManagerModule
 import kotlinx.android.synthetic.main.activity_ex.*
-import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
 
 class ExActivity : BaseActivity(), ExContract.IView {
