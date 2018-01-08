@@ -1,6 +1,6 @@
 package com.shhatrat.boilerplate_kkmvp.ui.api
 
-import com.shhatrat.boilerplate_kkmvp.data.model.Person
+import com.shhatrat.boilerplate.shared_classess.model.Person
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.MvpView
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.Presenter
 

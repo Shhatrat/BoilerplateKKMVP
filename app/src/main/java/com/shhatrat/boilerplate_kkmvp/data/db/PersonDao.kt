@@ -5,7 +5,7 @@ import android.arch.persistence.room.Delete
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.OnConflictStrategy.REPLACE
 import android.arch.persistence.room.Query
-import com.shhatrat.boilerplate_kkmvp.data.model.Person
+import com.shhatrat.boilerplate.shared_classess.model.Person
 import io.reactivex.Flowable
 
 /**

@@ -10,7 +10,7 @@ import org.koin.android.ext.android.inject
 class WearActivity : BaseActivity(), WearContract.IView {
 
     override fun getMessage(person: Person) {
-        toast(person.name)
+        toast(person.name?:"")
     }
 
     override fun attachPresenter() {

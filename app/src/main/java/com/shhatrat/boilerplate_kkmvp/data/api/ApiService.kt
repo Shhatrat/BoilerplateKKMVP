@@ -1,6 +1,6 @@
 package com.shhatrat.boilerplate_kkmvp.data.api
 
-import com.shhatrat.boilerplate_kkmvp.data.model.Person
+import com.shhatrat.boilerplate.shared_classess.model.Person
 import io.reactivex.Observable
 import retrofit2.Response
 import retrofit2.http.GET

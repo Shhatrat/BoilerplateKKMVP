@@ -1,6 +1,7 @@
 package com.shhatrat.boilerplate_kkmvp.data.manager.api
 
-import com.shhatrat.boilerplate_kkmvp.data.model.Person
+
+import com.shhatrat.boilerplate.shared_classess.model.Person
 import io.reactivex.Observable
 
 /**

@@ -1,14 +1,12 @@
-package com.shhatrat.boilerplate_kkmvp.data.model
+package com.shhatrat.boilerplate.shared_classess.model
 
-import com.google.gson.annotations.SerializedName
-import paperparcel.PaperParcel
-import paperparcel.PaperParcelable
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
-
+import paperparcel.PaperParcel
+import paperparcel.PaperParcelable
 /**
- * Created by szymon on 23/12/17.
+ * Created by szymon on 8/01/18.
  */
 @PaperParcel
 @Entity(tableName = "Person")
@@ -17,6 +15,8 @@ data class Person(
         var name: String?,
         @ColumnInfo(name = "idCard")
         var idCard: Int?): PaperParcelable {
+    constructor() : this(null, null)
+
     @ColumnInfo(name = "id")
     @PrimaryKey(autoGenerate = true) var id: Long = 0
 

@@ -2,7 +2,7 @@ package com.shhatrat.boilerplate_kkmvp.data.db
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
-import com.shhatrat.boilerplate_kkmvp.data.model.Person
+import com.shhatrat.boilerplate.shared_classess.model.Person
 
 
 /**

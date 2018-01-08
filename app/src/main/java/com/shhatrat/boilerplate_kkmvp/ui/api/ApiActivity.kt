@@ -1,8 +1,8 @@
 package com.shhatrat.boilerplate_kkmvp.ui.api
 
 import android.os.Bundle
+import com.shhatrat.boilerplate.shared_classess.model.Person
 import com.shhatrat.boilerplate_kkmvp.R
-import com.shhatrat.boilerplate_kkmvp.data.model.Person
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.android.BaseActivity
 import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
