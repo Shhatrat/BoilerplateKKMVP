@@ -8,7 +8,7 @@ import android.support.v4.app.NotificationCompat
 import com.shhatrat.boilerplate_kkmvp.R
 import com.shhatrat.boilerplate_kkmvp.data.manager.data.DataManager
 import com.shhatrat.boilerplate_kkmvp.data.repository.SettingsRepositiory
-import com.shhatrat.boilerplate_kkmvp.ui.MainActivity
+import com.shhatrat.boilerplate_kkmvp.ui.InitActivity
 import org.koin.android.ext.android.inject
 
 
@@ -29,10 +29,11 @@ class MainService : Service() {
     private fun checkForeground(intent: Intent?){
         if(intent?.extras?.get(foreground)==true)
         {
-            val notificationIntent = Intent(this, MainActivity::class.java)
+            val notificationIntent = Intent(this, InitActivity::class.java)
             val pendingIntent = PendingIntent.getActivity(this, 0,
                     notificationIntent, Intent.FILL_IN_ACTION)
 
+            //todo android O support
             val notification = NotificationCompat.Builder(this)
                     .setSmallIcon(R.mipmap.ic_launcher)
                     .setContentText(getString(R.string.app_name))

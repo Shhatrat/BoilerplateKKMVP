@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.InitActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,9 +29,9 @@
             android:exported="true" />
 
         <activity android:name=".ui.old.base.web.WebViewActivity" />
-        <activity android:name=".ui.old.ex.ExActivity" />
         <activity android:name=".ui.old.wear.WearActivity" />
-        <activity android:name=".ui.settings.SettingsActivity"></activity>
+        <activity android:name=".ui.settings.SettingsActivity" />
+        <activity android:name=".ui.main.MainActivity"></activity>
     </application>
 
 </manifest>

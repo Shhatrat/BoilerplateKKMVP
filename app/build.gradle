@@ -88,7 +88,7 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
 
     //layout
-    compile 'com.kyleduo.switchbutton:library:2.0.0'
+    implementation 'co.zsmb:materialdrawer-kt:1.2.2'
 
     //wear
     implementation 'com.google.android.gms:play-services-wearable:11.8.0'
