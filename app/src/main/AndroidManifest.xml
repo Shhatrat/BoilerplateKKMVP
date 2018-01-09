@@ -31,7 +31,8 @@
         <activity android:name=".ui.old.base.web.WebViewActivity" />
         <activity android:name=".ui.old.wear.WearActivity" />
         <activity android:name=".ui.settings.SettingsActivity" />
-        <activity android:name=".ui.main.MainActivity"></activity>
+        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.detail.DetailActivity"></activity>
     </application>
 
 </manifest>
