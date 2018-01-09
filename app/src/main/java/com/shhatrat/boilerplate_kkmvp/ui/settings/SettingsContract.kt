@@ -12,6 +12,9 @@ interface SettingsContract{
         fun hideWear()
         fun setView(enableWear: Boolean, enableService: Boolean, update: Boolean)
         fun showConnection(msg: String)
+        fun startService()
+        fun stopService()
+        fun startBackgroundService()
     }
     interface IPresenter<in T: MvpView>: Presenter<T> {
         fun getData()

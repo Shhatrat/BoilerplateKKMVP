@@ -4,11 +4,29 @@ import android.os.Bundle
 import android.view.View
 import com.shhatrat.boilerplate_kkmvp.R
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.android.BaseActivity
+import com.shhatrat.boilerplate_kkmvp.service.MainService
+import com.shhatrat.boilerplate_kkmvp.util.service.isRunning
 import kotlinx.android.synthetic.main.activity_settings.*
+import org.jetbrains.anko.startService
+import org.jetbrains.anko.stopService
 import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
 
 class SettingsActivity : BaseActivity(), SettingsContract.IView {
+    override fun startService() {
+        stopService()
+        startService<MainService>()
+    }
+
+    override fun stopService() {
+        if(isRunning<MainService>())
+            stopService<MainService>()
+    }
+
+    override fun startBackgroundService() {
+        stopService()
+        startService<MainService>(MainService.foreground to true)
+    }
 
     private val presenter by inject<SettingsContract.IPresenter<SettingsContract.IView>>()
 

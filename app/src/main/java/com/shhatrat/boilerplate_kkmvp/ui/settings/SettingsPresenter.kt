@@ -33,6 +33,13 @@ constructor(private val settingsRepositiory: SettingsRepositiory, private val we
     override fun setWear(e: Boolean) {
         settingsRepositiory.wear = e
         checkShowWear()
+        if(e)
+            if(settingsRepositiory.backgroundService)
+                view.startBackgroundService()
+            else
+                view.startService()
+        else
+            view.stopService()
     }
 
     private fun checkShowWear(){
@@ -44,6 +51,10 @@ constructor(private val settingsRepositiory: SettingsRepositiory, private val we
 
     override fun setService(e: Boolean) {
         settingsRepositiory.backgroundService = e
+        if(e)
+            view.startBackgroundService()
+        else
+            view.startService()
     }
 
     override fun setUpdate(e: Boolean) {
