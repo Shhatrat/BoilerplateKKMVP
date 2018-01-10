@@ -11,4 +11,5 @@ class SettingsRepositiory : Preferences(){
     var wear by booleanPref()
     var backgroundService by booleanPref()
     var updateEveryTime by booleanPref()
+    var favourites by stringSetPref()
 }

@@ -8,9 +8,9 @@ import com.shhatrat.boilerplate_kkmvp.di.baseUi.Presenter
  */
 interface DetailContract{
     interface IView: MvpView {
-
+        fun updateView()
     }
     interface IPresenter<in T: MvpView>: Presenter<T> {
-
+        fun updateData(id: Int)
     }
 }

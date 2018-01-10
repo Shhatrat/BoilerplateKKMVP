@@ -3,6 +3,7 @@ package com.shhatrat.boilerplate_kkmvp.di.baseUi.android
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
+import org.jetbrains.anko.toast
 
 /**
  * Created by szymon on 23/12/17.
@@ -17,6 +18,10 @@ abstract class BaseActivity: AppCompatActivity(), BasePresenterHandle{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         attachPresenter()
+    }
+
+    fun showError(msg: String){
+        toast(msg)
     }
 
     fun getContext() = this

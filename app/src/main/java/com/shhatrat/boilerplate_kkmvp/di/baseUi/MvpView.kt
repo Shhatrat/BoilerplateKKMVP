@@ -7,4 +7,5 @@ import android.content.Context
  */
 interface MvpView {
     fun getContext() : Context
+    fun showError(msg: String)
 }
