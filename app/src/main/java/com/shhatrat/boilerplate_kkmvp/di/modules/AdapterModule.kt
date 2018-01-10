@@ -1,5 +1,6 @@
 package com.shhatrat.boilerplate_kkmvp.di.modules
 
+import com.shhatrat.boilerplate_kkmvp.ui.list.adapter.BasicStationAdapter
 import com.shhatrat.boilerplate_kkmvp.ui.old.base.adapter.simple.SimpleListAdapter
 import org.koin.android.module.AndroidModule
 
@@ -9,5 +10,6 @@ import org.koin.android.module.AndroidModule
 class AdapterModule: AndroidModule() {
     override fun context() = applicationContext {
         provide { SimpleListAdapter() }
+        provide { BasicStationAdapter() }
     }
 }

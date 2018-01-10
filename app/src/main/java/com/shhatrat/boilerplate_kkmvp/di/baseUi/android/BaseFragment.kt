@@ -17,7 +17,7 @@ abstract class BaseFragment: Fragment(), BasePresenterHandle{
     }
 
     override fun getContext(): Context {
-        return context
+        return activity?.baseContext!!
     }
 
     fun showError(msg: String){

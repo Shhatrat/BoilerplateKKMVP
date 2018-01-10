@@ -28,7 +28,7 @@ data class BasicStation(
 
     @ColumnInfo()
     @PrimaryKey(autoGenerate = false)
-    var id: Long = 0
+    var id: Int = 0
     companion object {
         @JvmField val CREATOR = PaperParcelBasicStation.CREATOR }
 }

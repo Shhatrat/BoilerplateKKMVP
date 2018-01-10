@@ -9,7 +9,7 @@ import com.shhatrat.boilerplate_kkmvp.di.baseUi.Presenter
  */
 interface ListContract{
     interface IView: MvpView {
-        fun setList(list: List<BasicStation>)
+        fun setList(list: List<Pair<BasicStation, Boolean>>)
         fun updateList(item: BasicStation)
     }
     interface IPresenter<in T: MvpView>: Presenter<T> {

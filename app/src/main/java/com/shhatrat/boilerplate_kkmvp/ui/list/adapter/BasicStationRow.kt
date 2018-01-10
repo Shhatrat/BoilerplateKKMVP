@@ -32,9 +32,9 @@ class BasicStationRow(context: Context): ConstraintLayout(context){
             favCB.isChecked = value
         }
 
-    var pp: ((checkted: Boolean) ->Boolean)? = null
+    var pp: ((checkted: Boolean) ->Unit)? = null
         set(value){
             field = value
-            favCB.setOnCheckedChangeListener { buttonView, isChecked -> value?.invoke(isChecked) }
+            favCB.setOnCheckedChangeListener { _, isChecked -> value?.invoke(isChecked) }
     }
 }

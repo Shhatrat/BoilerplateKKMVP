@@ -1,6 +1,9 @@
 package com.shhatrat.boilerplate_kkmvp.di.modules
 
 import com.shhatrat.boilerplate_kkmvp.data.repository.SettingsRepositiory
+import com.shhatrat.boilerplate_kkmvp.ui.list.fragment.ListContract
+import com.shhatrat.boilerplate_kkmvp.ui.list.fragment.ListFragment
+import com.shhatrat.boilerplate_kkmvp.ui.list.fragment.ListPresenter
 import com.shhatrat.boilerplate_kkmvp.ui.old.api.ApiContract
 import com.shhatrat.boilerplate_kkmvp.ui.old.api.ApiPresenter
 import com.shhatrat.boilerplate_kkmvp.ui.old.ex.ExContract
@@ -21,6 +24,8 @@ class MvpModule: AndroidModule(){
         provide { ApiPresenter(get()) } bind ApiContract.IPresenter::class
         provide { ExPresenter( get()) } bind ExContract.IPresenter::class
         provide { SettingsPresenter( get(), get()) } bind SettingsContract.IPresenter::class
+        provide { ListPresenter(get(), get()) } bind ListContract.IPresenter::class
+        provide { ListFragment() }
     }
 
     fun getRepo(): SettingsRepositiory {

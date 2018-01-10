@@ -10,7 +10,6 @@ import com.shhatrat.boilerplate.shared_classess.model.BasicStation
 class BasicStationAdapter : RecyclerView.Adapter<BasicStationAdapter.ViewHolder>(){
 
     lateinit var list: List<Pair<BasicStation, Boolean>>
-    lateinit var favSet: Set<Int>
     lateinit var addToFav: (id: Int) -> Unit
     lateinit var removeFromFav: (id: Int) -> Unit
 
@@ -19,9 +18,15 @@ class BasicStationAdapter : RecyclerView.Adapter<BasicStationAdapter.ViewHolder>
             val item = list[position]
             text = item.first.stationName
             fav = item.second
-            pp = {true}
+            pp = {
+                if(it)
+                    addToFav.invoke(item.first.id)
+                else
+                    removeFromFav.invoke(item.first.id)
+            }
         }
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val rootView = BasicStationRow(parent!!.context)

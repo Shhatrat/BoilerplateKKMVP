@@ -29,7 +29,7 @@ class ListFragment : BaseFragment(), ListContract.IView {
         presenter.detachView()
     }
 
-    override fun setList(list: List<BasicStation>) {
+    override fun setList(list: List<Pair<BasicStation, Boolean>>) {
         adapter.list = list
         adapter.notifyDataSetChanged()
     }
@@ -54,12 +54,20 @@ class ListFragment : BaseFragment(), ListContract.IView {
         adapter.list = listOf()
         stationRV.layoutManager = LinearLayoutManager(this.context)
         stationRV.hasFixedSize()
-//        adapter.openDetailFun = this::startDetailActivity
+        adapter.addToFav  = this::addToFavourites
+        adapter.removeFromFav  = this::removeFromFavourites
         val divider = DividerItemDecoration(stationRV.context, DividerItemDecoration.VERTICAL)
         val dividerDrawable = ContextCompat.getDrawable(this.context, R.drawable.divider)
         if(dividerDrawable!=null)
             divider.setDrawable(dividerDrawable)
         stationRV.addItemDecoration(divider)
+    }
+
+    private fun addToFavourites(id: Int) {
+        presenter.addToFavourite(id)
+    }
+    private fun removeFromFavourites(id: Int) {
+        presenter.removeFromFavourite(id)
     }
 
 }
