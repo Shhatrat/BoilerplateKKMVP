@@ -9,6 +9,7 @@ import co.zsmb.materialdrawerkt.draweritems.divider
 import com.shhatrat.boilerplate_kkmvp.R
 import com.shhatrat.boilerplate_kkmvp.ui.list.fragment.ListFragment
 import com.shhatrat.boilerplate_kkmvp.ui.settings.SettingsActivity
+import com.shhatrat.boilerplate_kkmvp.util.externsions.replace
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 
@@ -27,7 +28,7 @@ class MainActivity : FragmentActivity() {
             primaryItem("Favourite") {}
             primaryItem("All") {
                 onClick { _ ->
-                    supportFragmentManager.beginTransaction().replace(R.id.frame, ListFragment()).commit()
+                    replace<ListFragment>(R.id.frame)
                     false
                 }
             }
