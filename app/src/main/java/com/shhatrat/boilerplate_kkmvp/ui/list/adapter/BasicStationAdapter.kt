@@ -12,18 +12,20 @@ class BasicStationAdapter : RecyclerView.Adapter<BasicStationAdapter.ViewHolder>
     lateinit var list: List<Pair<BasicStation, Boolean>>
     lateinit var addToFav: (id: Int) -> Unit
     lateinit var removeFromFav: (id: Int) -> Unit
+    lateinit var clickFun: (item : BasicStation) -> Unit
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         with(holder!!.view){
             val item = list[position]
             text = item.first.stationName
             fav = item.second
-            pp = {
+            changeFun = {
                 if(it)
                     addToFav.invoke(item.first.id)
                 else
                     removeFromFav.invoke(item.first.id)
             }
+            onClick = { clickFun(item.first)}
         }
     }
 

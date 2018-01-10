@@ -6,6 +6,10 @@ import com.shhatrat.boilerplate_kkmvp.R
 
 class DetailActivity : AppCompatActivity() {
 
+    companion object {
+        val basic = "basic"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)

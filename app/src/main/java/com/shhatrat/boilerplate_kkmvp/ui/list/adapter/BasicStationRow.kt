@@ -32,9 +32,14 @@ class BasicStationRow(context: Context): ConstraintLayout(context){
             favCB.isChecked = value
         }
 
-    var pp: ((checkted: Boolean) ->Unit)? = null
+    var changeFun: ((checkted: Boolean) ->Unit)? = null
         set(value){
             field = value
             favCB.setOnCheckedChangeListener { _, isChecked -> value?.invoke(isChecked) }
     }
+    var onClick: (() -> Unit)? = null
+        set(value){
+            field = value
+            descriptionTV.setOnClickListener { onClick?.invoke() }
+        }
 }

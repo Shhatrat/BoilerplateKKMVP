@@ -11,8 +11,10 @@ import android.view.ViewGroup
 import com.shhatrat.boilerplate.shared_classess.model.BasicStation
 import com.shhatrat.boilerplate_kkmvp.R
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.android.BaseFragment
+import com.shhatrat.boilerplate_kkmvp.ui.detail.DetailActivity
 import com.shhatrat.boilerplate_kkmvp.ui.list.adapter.BasicStationAdapter
 import kotlinx.android.synthetic.main.fragment_list.*
+import org.jetbrains.anko.startActivity
 import org.koin.android.ext.android.inject
 
 class ListFragment : BaseFragment(), ListContract.IView {
@@ -54,8 +56,11 @@ class ListFragment : BaseFragment(), ListContract.IView {
         adapter.list = listOf()
         stationRV.layoutManager = LinearLayoutManager(this.context)
         stationRV.hasFixedSize()
+
         adapter.addToFav  = this::addToFavourites
         adapter.removeFromFav  = this::removeFromFavourites
+        adapter.clickFun = { activity?.startActivity<DetailActivity>(DetailActivity.basic to it)}
+
         val divider = DividerItemDecoration(stationRV.context, DividerItemDecoration.VERTICAL)
         val dividerDrawable = ContextCompat.getDrawable(this.context, R.drawable.divider)
         if(dividerDrawable!=null)
