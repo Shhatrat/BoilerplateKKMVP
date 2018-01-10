@@ -18,7 +18,7 @@ import org.koin.android.ext.android.inject
 class ListFragment : BaseFragment(), ListContract.IView {
 
 
-    private val presenter by inject<ListContract.IPresenter<ListContract.IView>>()
+    private val presenter by inject<ListContract.IPresenter<ListContract.IView>>(intentKey)
     private val adapter by inject<BasicStationAdapter>()
 
     override fun attachPresenter() {

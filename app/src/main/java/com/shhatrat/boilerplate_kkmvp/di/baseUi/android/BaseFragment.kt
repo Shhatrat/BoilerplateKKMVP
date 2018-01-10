@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.View
+import com.shhatrat.boilerplate_kkmvp.Boilerplate
 import org.jetbrains.anko.toast
 
 /**
@@ -11,8 +12,13 @@ import org.jetbrains.anko.toast
  */
 abstract class BaseFragment: Fragment(), BasePresenterHandle{
 
+    companion object {
+        var intentKey: String = Boilerplate.normal
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        intentKey = arguments?.getString(Boilerplate.injectKey)?:Boilerplate.normal
         attachPresenter()
     }
 

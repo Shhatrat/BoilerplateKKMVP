@@ -13,6 +13,8 @@ class Boilerplate: Application(){
 
     companion object {
         val injectKey = "injectKey"
+        val normal = "normal"
+        val fav= "fav"
     }
 
     override fun onCreate() {

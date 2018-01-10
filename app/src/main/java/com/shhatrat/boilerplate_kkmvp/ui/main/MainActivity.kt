@@ -6,6 +6,7 @@ import co.zsmb.materialdrawerkt.builders.drawer
 import co.zsmb.materialdrawerkt.draweritems.badgeable.primaryItem
 import co.zsmb.materialdrawerkt.draweritems.badgeable.secondaryItem
 import co.zsmb.materialdrawerkt.draweritems.divider
+import com.shhatrat.boilerplate_kkmvp.Boilerplate
 import com.shhatrat.boilerplate_kkmvp.R
 import com.shhatrat.boilerplate_kkmvp.ui.list.fragment.ListFragment
 import com.shhatrat.boilerplate_kkmvp.ui.settings.SettingsActivity
@@ -25,10 +26,15 @@ class MainActivity : FragmentActivity() {
     private fun prepareDrawer(){
         drawer {
             toolbar = toolbarAc
-            primaryItem("Favourite") {}
+            primaryItem("Favourite") {
+                onClick { _ ->
+                    replace<ListFragment>(R.id.frame, Boilerplate.fav)
+                    false
+                }
+            }
             primaryItem("All") {
                 onClick { _ ->
-                    replace<ListFragment>(R.id.frame)
+                    replace<ListFragment>(R.id.frame, Boilerplate.normal)
                     false
                 }
             }
