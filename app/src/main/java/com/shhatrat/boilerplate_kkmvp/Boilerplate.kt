@@ -10,6 +10,11 @@ import org.koin.android.ext.android.startKoin
  * Created by szymon on 23/12/17.
  */
 class Boilerplate: Application(){
+
+    companion object {
+        val injectKey = "injectKey"
+    }
+
     override fun onCreate() {
         super.onCreate()
         startKoin(this, Modules.get())
