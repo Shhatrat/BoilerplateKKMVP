@@ -47,7 +47,7 @@ dependencies {
 
     //rx2
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.8'
     compile 'io.reactivex.rxjava2:rxkotlin:2.2.0'
     compile 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
 

@@ -5,9 +5,9 @@ import android.support.v7.app.AppCompatActivity
 import com.shhatrat.boilerplate_kkmvp.data.repository.SettingsRepositiory
 import com.shhatrat.boilerplate_kkmvp.service.MainService
 import com.shhatrat.boilerplate_kkmvp.ui.main.MainActivity
+import com.shhatrat.boilerplate_kkmvp.util.externsions.startService
 import com.shhatrat.boilerplate_kkmvp.util.service.isRunning
 import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.startService
 import org.jetbrains.anko.stopService
 import org.koin.android.ext.android.inject
 
