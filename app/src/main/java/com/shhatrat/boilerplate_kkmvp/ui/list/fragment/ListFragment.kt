@@ -2,9 +2,6 @@ package com.shhatrat.boilerplate_kkmvp.ui.list.fragment
 
 
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import android.support.v7.widget.DividerItemDecoration
-import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +10,7 @@ import com.shhatrat.boilerplate_kkmvp.R
 import com.shhatrat.boilerplate_kkmvp.di.baseUi.android.BaseFragment
 import com.shhatrat.boilerplate_kkmvp.ui.detail.DetailActivity
 import com.shhatrat.boilerplate_kkmvp.ui.list.adapter.BasicStationAdapter
+import com.shhatrat.boilerplate_kkmvp.util.externsions.prepareSimple
 import kotlinx.android.synthetic.main.fragment_list.*
 import org.jetbrains.anko.startActivity
 import org.koin.android.ext.android.inject
@@ -54,18 +52,11 @@ class ListFragment : BaseFragment(), ListContract.IView {
     private fun preapreRV(){
         stationRV.adapter = adapter
         adapter.list = listOf()
-        stationRV.layoutManager = LinearLayoutManager(this.context)
-        stationRV.hasFixedSize()
+        stationRV.prepareSimple(this.context)
 
         adapter.addToFav  = this::addToFavourites
         adapter.removeFromFav  = this::removeFromFavourites
-        adapter.clickFun = { activity?.startActivity<DetailActivity>(DetailActivity.BACIC to it)}
-
-        val divider = DividerItemDecoration(stationRV.context, DividerItemDecoration.VERTICAL)
-        val dividerDrawable = ContextCompat.getDrawable(this.context, R.drawable.divider)
-        if(dividerDrawable!=null)
-            divider.setDrawable(dividerDrawable)
-        stationRV.addItemDecoration(divider)
+        adapter.clickFun = { activity?.startActivity<DetailActivity>(DetailActivity.BASIC to it)}
     }
 
     private fun addToFavourites(id: Int) {

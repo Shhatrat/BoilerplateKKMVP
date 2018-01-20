@@ -14,7 +14,7 @@ class SimpleListAdapter : RecyclerView.Adapter<SimpleListAdapter.ViewHolder>(){
         with(holder.view) {
             text = list[position].text
             imageDrawableId = list[position].imageId
-            setOnClickListener { list[position].onClickFun.invoke() }
+            setOnClickListener { list[position].onClickFun?.invoke() }
         }
     }
 
