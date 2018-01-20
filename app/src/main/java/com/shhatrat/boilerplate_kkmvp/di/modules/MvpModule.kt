@@ -3,6 +3,8 @@ package com.shhatrat.boilerplate_kkmvp.di.modules
 import com.shhatrat.boilerplate_kkmvp.Boilerplate.Companion.fav
 import com.shhatrat.boilerplate_kkmvp.Boilerplate.Companion.normal
 import com.shhatrat.boilerplate_kkmvp.data.repository.SettingsRepositiory
+import com.shhatrat.boilerplate_kkmvp.ui.detail.DetailContract
+import com.shhatrat.boilerplate_kkmvp.ui.detail.DetailPresenter
 import com.shhatrat.boilerplate_kkmvp.ui.list.fragment.FavPresenter
 import com.shhatrat.boilerplate_kkmvp.ui.list.fragment.ListContract
 import com.shhatrat.boilerplate_kkmvp.ui.list.fragment.ListFragment
@@ -30,6 +32,7 @@ class MvpModule: AndroidModule(){
         provide(fav) { ListPresenter(get(), get()) } bind ListContract.IPresenter::class
         provide(normal) { FavPresenter(get(), get()) } bind ListContract.IPresenter::class
         provide { ListFragment() }
+        provide { DetailPresenter( get()) } bind DetailContract.IPresenter::class
     }
 
     fun getRepo(): SettingsRepositiory {
