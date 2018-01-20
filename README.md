@@ -28,3 +28,4 @@ You can easily merge it into `master`.
 - Calligraphy
 - Realm `addon/Realm`
 - Room `addon/Room`
+- Android O support
