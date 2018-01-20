@@ -11,6 +11,6 @@ import org.jetbrains.anko.bundleOf
 inline fun <reified T: Fragment> FragmentActivity.replace(id: Int, injectKey: String?){
     val fragment = T::class.java.newInstance()
     if(injectKey!=null)
-        fragment.arguments = bundleOf(Boilerplate.injectKey to injectKey)
+        fragment.arguments = bundleOf(Boilerplate.INJECT_KEY to injectKey)
     this.supportFragmentManager.beginTransaction().replace(id, fragment).commit()
 }

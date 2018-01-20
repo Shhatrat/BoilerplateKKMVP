@@ -49,8 +49,8 @@
 
     <Button
         android:id="@+id/checkWearBtn"
-        android:layout_width="0dp"
         style="@style/Button"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"

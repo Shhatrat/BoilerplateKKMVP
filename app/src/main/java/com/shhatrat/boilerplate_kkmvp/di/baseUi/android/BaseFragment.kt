@@ -13,12 +13,12 @@ import org.jetbrains.anko.toast
 abstract class BaseFragment: Fragment(), BasePresenterHandle{
 
     companion object {
-        var intentKey: String = Boilerplate.normal
+        var intentKey: String = Boilerplate.NORMAL
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        intentKey = arguments?.getString(Boilerplate.injectKey)?:Boilerplate.normal
+        intentKey = arguments?.getString(Boilerplate.INJECT_KEY)?:Boilerplate.NORMAL
         attachPresenter()
     }
 

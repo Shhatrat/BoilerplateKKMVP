@@ -59,7 +59,7 @@ class ListFragment : BaseFragment(), ListContract.IView {
 
         adapter.addToFav  = this::addToFavourites
         adapter.removeFromFav  = this::removeFromFavourites
-        adapter.clickFun = { activity?.startActivity<DetailActivity>(DetailActivity.basic to it)}
+        adapter.clickFun = { activity?.startActivity<DetailActivity>(DetailActivity.BACIC to it)}
 
         val divider = DividerItemDecoration(stationRV.context, DividerItemDecoration.VERTICAL)
         val dividerDrawable = ContextCompat.getDrawable(this.context, R.drawable.divider)

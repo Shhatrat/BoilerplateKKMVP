@@ -12,9 +12,9 @@ import org.koin.android.ext.android.startKoin
 class Boilerplate: Application(){
 
     companion object {
-        val injectKey = "injectKey"
-        val normal = "normal"
-        val fav= "fav"
+        val INJECT_KEY = "INJECT_KEY"
+        val NORMAL = "NORMAL"
+        val FAV = "FAV"
     }
 
     override fun onCreate() {

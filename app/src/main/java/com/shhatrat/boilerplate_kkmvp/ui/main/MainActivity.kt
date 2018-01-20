@@ -28,13 +28,13 @@ class MainActivity : FragmentActivity() {
             toolbar = toolbarAc
             primaryItem("Favourite") {
                 onClick { _ ->
-                    replace<ListFragment>(R.id.frame, Boilerplate.fav)
+                    replace<ListFragment>(R.id.frame, Boilerplate.FAV)
                     false
                 }
             }
             primaryItem("All") {
                 onClick { _ ->
-                    replace<ListFragment>(R.id.frame, Boilerplate.normal)
+                    replace<ListFragment>(R.id.frame, Boilerplate.NORMAL)
                     false
                 }
             }
