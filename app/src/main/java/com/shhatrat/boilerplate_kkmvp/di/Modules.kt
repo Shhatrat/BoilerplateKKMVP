@@ -1,5 +1,6 @@
 package com.shhatrat.boilerplate_kkmvp.di
 
+import com.shhatrat.boilerplate_kkmvp.di.modules.dbModule
 import com.shhatrat.boilerplate_kkmvp.di.modules.managerModule
 import com.shhatrat.boilerplate_kkmvp.di.modules.mvpModule
 import com.shhatrat.boilerplate_kkmvp.di.modules.serviceModule
