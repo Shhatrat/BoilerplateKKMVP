@@ -20,7 +20,7 @@ class SimpleListAdapter : RecyclerView.Adapter<SimpleListAdapter.ViewHolder>(){
 
     override fun getItemCount() = list.size
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder? {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val rootView = SimpleTextRow(parent.context)
         val lp = RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         rootView.layoutParams = lp
