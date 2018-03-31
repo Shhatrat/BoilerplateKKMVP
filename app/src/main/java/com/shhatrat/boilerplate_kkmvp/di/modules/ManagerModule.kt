@@ -3,19 +3,20 @@ package com.shhatrat.boilerplate_kkmvp.di.modules
 import com.shhatrat.boilerplate_kkmvp.data.manager.data.DataManager
 import com.shhatrat.boilerplate_kkmvp.data.manager.data.DataManagerFake
 import com.shhatrat.boilerplate_kkmvp.data.manager.data.DataManagerImpl
-import org.koin.android.module.AndroidModule
+import com.shhatrat.boilerplate_kkmvp.di.modules.InjectionType.FAKE
+import com.shhatrat.boilerplate_kkmvp.di.modules.InjectionType.REAL
+import org.koin.dsl.module.Module
+import org.koin.dsl.module.applicationContext
 
 /**
  * Created by szymon on 24/12/17.
  */
-class ManagerModule: AndroidModule(){
-    override fun context() = applicationContext {
-            provide(REAL) { DataManagerImpl() } bind DataManager::class
-            provide(FAKE) { DataManagerFake() } bind DataManager::class
-    }
+val managerModule: Module = applicationContext {
+            bean(REAL) { DataManagerImpl() } bind DataManager::class
+            bean(FAKE) { DataManagerFake() } bind DataManager::class
+}
 
-    companion object {
-        val REAL = "REAL"
-        val FAKE = "FAKE"
-    }
+object InjectionType{
+    val REAL = "REAL"
+    val FAKE = "FAKE"
 }
