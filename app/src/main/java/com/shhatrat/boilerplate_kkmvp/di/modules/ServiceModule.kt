@@ -1,13 +1,12 @@
 package com.shhatrat.boilerplate_kkmvp.di.modules
 
 import com.shhatrat.boilerplate_kkmvp.service.MainService
-import org.koin.android.module.AndroidModule
+import org.koin.dsl.module.Module
+import org.koin.dsl.module.applicationContext
 
 /**
  * Created by szymon on 1/01/18.
  */
-class ServiceModule: AndroidModule(){
-    override fun context() = applicationContext {
-        provide { MainService() }
+val serviceModule: Module = applicationContext {
+        factory { MainService() }
     }
-}
