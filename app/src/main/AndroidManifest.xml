@@ -20,7 +20,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.ex.ExActivity" />
-        <activity android:name=".ui.api.ApiActivity"></activity>
+        <activity android:name=".ui.api.ApiActivity"/>
+
+        <service
+            android:name=".service.MainService"
+            android:enabled="true"
+            android:exported="true"/>
     </application>
 
 </manifest>
