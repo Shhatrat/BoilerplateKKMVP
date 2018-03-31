@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         startActivity<ExActivity>()
-//        startService<MainService>()
-//        button.setOnClickListener {
-//            toast(isRunning<MainService>().toString())
-//        }
+        startService<MainService>()
+        button.setOnClickListener {
+            toast(isRunning<MainService>().toString())
+        }
     }
 }

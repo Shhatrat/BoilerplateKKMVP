@@ -12,6 +12,8 @@ Repository contains branches:
 - `addon/RestApi` simple example and logic for using REST api.
 - `addon/BaseViews` simple classes (such as adapters) for reducing boilerplate code
 - `addon/AndroidWear` simple boilerplate for standalone Android Wear app
+- `addon/Realm` simple example of using Realm DB
+- `addon/Room` simple example of using Room DB
 
 You can easily merge it into `master`.
 
@@ -24,3 +26,9 @@ You can easily merge it into `master`.
 - Picasso
 - PaperParcel
 - Calligraphy
+- Realm `addon/Realm`
+- Room `addon/Room`
+- Android O support
+
+# TODO
+- example `example/pollutionApp`
