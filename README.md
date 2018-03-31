@@ -44,8 +44,35 @@ interface ExampleContract{
 }
 ```
 Interface `IView` should be implement by inheritance `BaseActivity` or `BaseFragment` class. This solution forces us to attach and detach presenter object in proper moment of `Activity` of `Fragment` lifecycle.
+```
+interface BasePresenterHandle{
+     fun attachPresenter()
+     fun detachPresenter()
+}
+```
 
-Interface `IPresenter` should be implement by inheritance `BasePresenter` class. `BasePresenter` contains `subscriptions` variable.
+Interface `IPresenter` should be implement by inheritance `BasePresenter` class. `BasePresenter` contains `subscriptions` variable (`CompositeDisposable`), every RxJava's Disposable should be add to it (preventing memory leaks).
+
+Every `Presenter's` interface should be bind to implmentation by factory in `mvpModule` file.
+```
+...
+    factory { ApiPresenter(get()) }     bind ApiContract.IPresenter::class
+...
+```
+then, presenter in `IView` implementation should be injected this way:
+```
+    private val presenter by inject<ExContract.IPresenter<ExContract.IView>>()
+    
+    override fun attachPresenter() {
+        presenter.attachView(this)
+    }
+
+    override fun detachPresenter() {
+        presenter.detachView()
+    }
+```
+
+See `com.shhatrat.boilerplate_kkmvp.ui.ex` for more details and example.
 
 # TODO
 - example `example/pollutionApp`
