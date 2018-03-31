@@ -3,7 +3,8 @@ package com.shhatrat.boilerplate_kkmvp.di.modules
 import com.shhatrat.boilerplate_kkmvp.data.api.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.koin.android.module.AndroidModule
+import org.koin.dsl.module.Module
+import org.koin.dsl.module.applicationContext
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -12,12 +13,10 @@ import java.util.concurrent.TimeUnit
 /**
  * Created by szymon on 25/12/17.
  */
-class ApiModule: AndroidModule() {
-
-    override fun context() = applicationContext {
-        provide { createOkHttpClient() }
-        provide { ApiService }
-        provide { createWebService<ApiService>(get(), ApiService.URL) }
+val apiModule: Module = applicationContext {
+        bean { createOkHttpClient() }
+        bean { ApiService }
+        bean { createWebService<ApiService>(get(), ApiService.URL) }
     }
 
 
@@ -38,5 +37,3 @@ class ApiModule: AndroidModule() {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build()
         return retrofit.create(T::class.java)
     }
-
-}
