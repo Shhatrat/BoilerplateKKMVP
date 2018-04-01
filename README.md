@@ -76,6 +76,7 @@ See `com.shhatrat.boilerplate_kkmvp.ui.ex` for more details and example.
 
 # How-to
 - clone this repository
+- optionally merge branches which you need
 - in `app/build.gradle` change `applicationId` to your package
 - in `strings.xml` change `app_name`
 - change `Boilerplate.kt`class name to other
