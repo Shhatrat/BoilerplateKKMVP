@@ -74,5 +74,13 @@ then, presenter in `IView` implementation should be injected this way:
 
 See `com.shhatrat.boilerplate_kkmvp.ui.ex` for more details and example.
 
+# How-to
+- clone this repository
+- in `app/build.gradle` change `applicationId` to your package
+- in `strings.xml` change `app_name`
+- change `Boilerplate.kt`class name to other
+- change `com.shhatrat.boilerplate_kkmbp` package to your package
+- remove `.git` files and directories
+
 # TODO
 - example `example/pollutionApp`
