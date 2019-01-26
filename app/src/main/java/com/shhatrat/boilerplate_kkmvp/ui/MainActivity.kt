@@ -1,7 +1,7 @@
 package com.shhatrat.boilerplate_kkmvp.ui
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.shhatrat.boilerplate_kkmvp.R
 import com.shhatrat.boilerplate_kkmvp.ui.api.ApiActivity
 import org.jetbrains.anko.startActivity
