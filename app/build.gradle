@@ -4,6 +4,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
+
+    androidExtensions {
+        //fixme change it when paperParcel will support androidX
+        experimental = true
+    }
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.shhatrat.boilerplate_kkmvp"
@@ -58,9 +64,9 @@ dependencies {
 
 
     //room
-    compile "android.arch.persistence.room:runtime:1.0.0"
-    kapt "android.arch.persistence.room:compiler:1.0.0"
-    compile "android.arch.persistence.room:rxjava2:1.0.0"
+    compile "android.arch.persistence.room:runtime:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+    compile "android.arch.persistence.room:rxjava2:1.1.1"
 
     //utils
     implementation 'com.squareup.picasso:picasso:2.5.2'
@@ -75,9 +81,6 @@ dependencies {
 
     implementation group: 'joda-time', name: 'joda-time', version: '2.9.9'
     implementation 'id.zelory:compressor:2.1.0'
-    implementation 'nz.bradcampbell:paperparcel:2.0.4'
-    implementation 'nz.bradcampbell:paperparcel-kotlin:2.0.4' // Optional
-    kapt 'nz.bradcampbell:paperparcel-compiler:2.0.4'
 
     androidTestImplementation "androidx.annotation:annotation:1.0.1"
     androidTestImplementation("androidx.test.espresso:espresso-contrib:3.1.0-alpha4") {

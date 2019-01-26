@@ -1,17 +1,18 @@
 package com.shhatrat.boilerplate_kkmvp.data.db
 
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Delete
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.OnConflictStrategy.REPLACE
-import android.arch.persistence.room.Query
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy.REPLACE
+import androidx.room.Query
 import com.shhatrat.boilerplate_kkmvp.data.model.Person
 import io.reactivex.Flowable
 
 /**
  * Created by szymon on 7/01/18.
  */
-@Dao interface PersonDao{
+@Dao
+interface PersonDao{
 
     @Query("select * from person")
     fun getAllTasks(): Flowable<List<Person>>
