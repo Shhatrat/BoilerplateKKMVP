@@ -1,7 +1,7 @@
 package com.shhatrat.boilerplate_kkmvp.ui.base.adapter.simple
 
-import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 
 /**
  * Created by szymon on 24/12/17.

@@ -2,9 +2,9 @@ package com.shhatrat.boilerplate_kkmvp.ui.base.adapter.simple
 
 import android.content.Context
 import android.graphics.drawable.Drawable
-import android.support.v4.content.ContextCompat
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import androidx.core.content.ContextCompat
 import com.shhatrat.boilerplate_kkmvp.R
 import com.shhatrat.boilerplate_kkmvp.util.externsions.load
 import kotlinx.android.synthetic.main.row_simple_text.view.*
