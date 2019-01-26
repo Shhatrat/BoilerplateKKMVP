@@ -15,11 +15,7 @@ import org.koin.dsl.module.module
 val mvpModule: Module = module {
         single { getRepo() }
         factory { ExPresenter(get(ExActivity.INJECT_NAME), get()) } bind ExContract.IPresenter::class
-    }
-val mvpModule: Module = applicationContext {
-    bean { getRepo() }
-    factory { ExPresenter(get(ExActivity.INJECT_NAME), get()) } bind ExContract.IPresenter::class
-    factory { WearPresenter(get()) } bind  WearContract.IPresenter::class
+        factory { WearPresenter(get()) } bind  WearContract.IPresenter::class
 }
 
     fun getRepo(): UserRepositiory {
