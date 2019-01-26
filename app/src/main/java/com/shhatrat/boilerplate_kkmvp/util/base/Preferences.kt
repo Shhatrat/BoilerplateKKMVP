@@ -23,25 +23,10 @@ import kotlin.reflect.KProperty
  * }
  * ```
  */
-abstract class Preferences {
-    companion object {
-        private var context: Context? = null
-
-        /**
-         * Initialize PrefDelegate with a Context reference.
-         *
-         * **This method needs to be called before any other usage of PrefDelegate!!**
-         */
-        fun init(context: Context) {
-            this.context = context
-        }
-    }
+abstract class Preferences : ContextProvider() {
 
     private val prefs: SharedPreferences by lazy {
-        if (context != null)
-            context!!.getSharedPreferences(javaClass.simpleName, Context.MODE_PRIVATE)
-        else
-            throw IllegalStateException("Context was not initialized. Call Preferences.init(context) before using it")
+            context.getSharedPreferences(javaClass.simpleName, Context.MODE_PRIVATE)
     }
 
     private val listeners = mutableListOf<SharedPrefsListener>()
