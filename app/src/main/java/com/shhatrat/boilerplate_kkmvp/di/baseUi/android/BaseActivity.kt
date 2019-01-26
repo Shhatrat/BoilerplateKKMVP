@@ -2,7 +2,7 @@ package com.shhatrat.boilerplate_kkmvp.di.baseUi.android
 
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * Created by szymon on 23/12/17.

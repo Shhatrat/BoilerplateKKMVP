@@ -2,7 +2,7 @@ package com.shhatrat.boilerplate_kkmvp
 
 import android.app.Application
 import com.shhatrat.boilerplate_kkmvp.di.Modules
-import com.shhatrat.boilerplate_kkmvp.util.base.Preferences
+import com.shhatrat.boilerplate_kkmvp.util.base.ContextProvider
 import io.realm.Realm
 import org.koin.android.ext.android.startKoin
 
@@ -14,7 +14,7 @@ class Boilerplate: Application(){
     override fun onCreate() {
         super.onCreate()
         startKoin(this, Modules.get())
-        Preferences.init(this)
+        ContextProvider.init(this)
         Realm.init(this)
     }
 }

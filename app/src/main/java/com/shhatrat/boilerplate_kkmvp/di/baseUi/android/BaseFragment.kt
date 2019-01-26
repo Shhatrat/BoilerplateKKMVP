@@ -1,8 +1,8 @@
 package com.shhatrat.boilerplate_kkmvp.di.baseUi.android
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.View
+import androidx.fragment.app.Fragment
 
 /**
  * Created by szymon on 23/12/17.
