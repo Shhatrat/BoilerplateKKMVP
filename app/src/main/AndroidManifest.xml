@@ -23,7 +23,7 @@
         <service
             android:name=".service.MainService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true"/>
     </application>
 
 </manifest>
