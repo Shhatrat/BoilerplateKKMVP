@@ -4,7 +4,7 @@ import com.shhatrat.boilerplate_kkmvp.data.api.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module.Module
-import org.koin.dsl.module.applicationContext
+import org.koin.dsl.module.module
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -13,10 +13,10 @@ import java.util.concurrent.TimeUnit
 /**
  * Created by szymon on 25/12/17.
  */
-val apiModule: Module = applicationContext {
-        bean { createOkHttpClient() }
-        bean { ApiService }
-        bean { createWebService<ApiService>(get(), ApiService.URL) }
+val apiModule: Module = module {
+        single { createOkHttpClient() }
+        single { ApiService }
+        single { createWebService<ApiService>(get(), ApiService.URL) }
     }
 
 
