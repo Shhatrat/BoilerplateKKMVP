@@ -20,13 +20,12 @@ You can easily merge it into `master`.
 # Technologies and patterns used
 - MVP with contracts
 - 100% Kotlin
+- AndroidX
 - Retrofit2 and OkHttp `addon/RestApi`
 - RxJava2
 - Koin (DI)
 - Support libraries
 - Picasso
-- PaperParcel
-- Calligraphy
 - Realm `addon/Realm`
 - Room `addon/Room`
 - Android O support
