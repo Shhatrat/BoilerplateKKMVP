@@ -1,4 +1,8 @@
 # BoilerplateKKMVP
+```diff
+- This project is deprecated. Please use https://github.com/Shhatrat/BoilerplateKKMVP2
+```
+
 
 Welcome to my boilerplate Android project. Firstly, why I named it KKMVP?
 
